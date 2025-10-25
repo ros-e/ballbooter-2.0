@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ballbooter-2.0", "ballbooter-2.0.csproj", "{6749C2E7-CB4B-4D2C-9492-98C7EC6EE9A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6749C2E7-CB4B-4D2C-9492-98C7EC6EE9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6749C2E7-CB4B-4D2C-9492-98C7EC6EE9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6749C2E7-CB4B-4D2C-9492-98C7EC6EE9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6749C2E7-CB4B-4D2C-9492-98C7EC6EE9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9DD93B7-0620-483D-BAA7-B245339383AB}
+	EndGlobalSection
+EndGlobal
