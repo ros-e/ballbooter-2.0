@@ -32,9 +32,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.targetIP = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -114,7 +114,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.targetIP);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(207, 12);
@@ -123,26 +123,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select yo bitch";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IP";
             // 
             // button1
             // 
@@ -158,6 +138,27 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "LOCK IN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "IP";
+            // 
+            // targetIP
+            // 
+            this.targetIP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.targetIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.targetIP.ForeColor = System.Drawing.Color.White;
+            this.targetIP.Location = new System.Drawing.Point(31, 19);
+            this.targetIP.Name = "targetIP";
+            this.targetIP.Size = new System.Drawing.Size(272, 20);
+            this.targetIP.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -208,6 +209,7 @@
             this.textBox2.ForeColor = System.Drawing.Color.Orange;
             this.textBox2.Location = new System.Drawing.Point(9, 19);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(787, 63);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "Smoked Salmon Pasta";
@@ -250,24 +252,26 @@
             // chkAllowGzip
             // 
             this.chkAllowGzip.AutoSize = true;
+            this.chkAllowGzip.BackColor = System.Drawing.Color.Black;
             this.chkAllowGzip.Enabled = false;
             this.chkAllowGzip.Location = new System.Drawing.Point(695, 37);
             this.chkAllowGzip.Name = "chkAllowGzip";
             this.chkAllowGzip.Size = new System.Drawing.Size(67, 17);
             this.chkAllowGzip.TabIndex = 55;
             this.chkAllowGzip.Text = "use gZip";
-            this.chkAllowGzip.UseVisualStyleBackColor = true;
+            this.chkAllowGzip.UseVisualStyleBackColor = false;
             // 
             // chkUseGet
             // 
             this.chkUseGet.AutoSize = true;
+            this.chkUseGet.BackColor = System.Drawing.Color.Black;
             this.chkUseGet.Enabled = false;
             this.chkUseGet.Location = new System.Drawing.Point(695, 16);
             this.chkUseGet.Name = "chkUseGet";
             this.chkUseGet.Size = new System.Drawing.Size(68, 17);
             this.chkUseGet.TabIndex = 54;
             this.chkUseGet.Text = "use GET";
-            this.chkUseGet.UseVisualStyleBackColor = true;
+            this.chkUseGet.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -280,7 +284,7 @@
             // 
             // txtSLSpT
             // 
-            this.txtSLSpT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtSLSpT.BackColor = System.Drawing.Color.Black;
             this.txtSLSpT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLSpT.Enabled = false;
             this.txtSLSpT.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -386,16 +390,17 @@
             // chkWaitReply
             // 
             this.chkWaitReply.AutoSize = true;
+            this.chkWaitReply.BackColor = System.Drawing.Color.Black;
             this.chkWaitReply.Location = new System.Drawing.Point(231, 72);
             this.chkWaitReply.Name = "chkWaitReply";
             this.chkWaitReply.Size = new System.Drawing.Size(88, 17);
             this.chkWaitReply.TabIndex = 40;
             this.chkWaitReply.Text = "Wait for reply";
-            this.chkWaitReply.UseVisualStyleBackColor = true;
+            this.chkWaitReply.UseVisualStyleBackColor = false;
             // 
             // txtData
             // 
-            this.txtData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtData.BackColor = System.Drawing.Color.Black;
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtData.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtData.ForeColor = System.Drawing.Color.Orange;
@@ -408,7 +413,7 @@
             // 
             // txtSubsite
             // 
-            this.txtSubsite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtSubsite.BackColor = System.Drawing.Color.Black;
             this.txtSubsite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSubsite.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubsite.ForeColor = System.Drawing.Color.Orange;
@@ -421,7 +426,7 @@
             // 
             // txtTimeout
             // 
-            this.txtTimeout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtTimeout.BackColor = System.Drawing.Color.Black;
             this.txtTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimeout.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimeout.ForeColor = System.Drawing.Color.Azure;
@@ -434,7 +439,7 @@
             // 
             // txtThreads
             // 
-            this.txtThreads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtThreads.BackColor = System.Drawing.Color.Black;
             this.txtThreads.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtThreads.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThreads.ForeColor = System.Drawing.Color.Azure;
@@ -447,7 +452,7 @@
             // 
             // cbMethod
             // 
-            this.cbMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cbMethod.BackColor = System.Drawing.Color.Black;
             this.cbMethod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbMethod.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMethod.ForeColor = System.Drawing.Color.Azure;
@@ -467,7 +472,7 @@
             // 
             // txtPort
             // 
-            this.txtPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtPort.BackColor = System.Drawing.Color.Black;
             this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPort.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPort.ForeColor = System.Drawing.Color.Azure;
@@ -480,7 +485,7 @@
             // 
             // tbSpeed
             // 
-            this.tbSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.tbSpeed.BackColor = System.Drawing.Color.Black;
             this.tbSpeed.Location = new System.Drawing.Point(452, 65);
             this.tbSpeed.Maximum = 50;
             this.tbSpeed.Name = "tbSpeed";
@@ -647,6 +652,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::ballbooter_2._0.Properties.Resources.NEWGEORGEPHOTO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 536);
@@ -659,8 +665,10 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "ballbooter 2.0 | by rose";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -681,7 +689,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox targetIP;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
